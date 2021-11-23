@@ -96,12 +96,16 @@ if args.generation is not None:
     print("Hello, user!^_^")
     print("\nEnter the path for the public key: ")
     public = input()
+    print("\nPublic key saved to ", public)
     print("\nEnter the path for the private key: ")
     private = input()
+    print("\nPrivate key saved to ", public)
     print("\nEnter the path for the symmetric key: ")
     symmetric = input()
     generate_keys(symmetric, public, private)
     print("\nThe process is complete!")
+    print("\nSymmetric key saved to ", public)
+    os.system("pause")
 else:
     if args.encryption is not None:
         print("Enter the path to the source text: ")
@@ -114,6 +118,8 @@ else:
         res = input()
         encryption_data(text, private, symmetric, res)
         print("\nThe process is complete!")
+        print("\nCiphertext key saved to ", res)
+        os.system("pause")
     else:
         print("Enter the path to the ciphertext: ")
         text = input()
@@ -125,3 +131,5 @@ else:
         res = input()
         decryption_data(private, sym, text, res)
         print("\nThe process is complete!")
+        print("\nDecrypted text key saved to ", res)
+        os.system("pause")
