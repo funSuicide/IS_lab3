@@ -99,12 +99,12 @@ if args.generation is not None:
     print("\nPublic key saved to ", public)
     print("\nEnter the path for the private key: ")
     private = input()
-    print("\nPrivate key saved to ", public)
+    print("\nPrivate key saved to ", private)
     print("\nEnter the path for the symmetric key: ")
     symmetric = input()
     generate_keys(symmetric, public, private)
     print("\nThe process is complete!")
-    print("\nSymmetric key saved to ", public)
+    print("\nSymmetric key saved to ", symmetric)
     os.system("pause")
 else:
     if args.encryption is not None:
